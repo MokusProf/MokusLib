@@ -1,0 +1,6 @@
+{
+  "parent": "mokuslib:item/mokus_sword_template",
+  "textures": {
+    "layer0": "mokuslib:item/mokus_sword_alt_ver_details"
+  }
+}

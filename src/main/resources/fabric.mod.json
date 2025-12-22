@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "mokuslib",
+	"version": "${version}",
+	"name": "MokusLib",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"_Mokus"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mokuslib/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mokus.mokuslib.MokusLib"
+		],
+		"client": [
+			"net.mokus.mokuslib.MokusLibClient"
+		],
+		"cardinal-components": [
+			"net.mokus.mokuslib.components.ModComponents"
+		]
+	},
+	"mixins": [
+		"mokuslib.mixins.json"
+	],
+	"accessWidener": "mokuslib.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cardinal-components-base": ">=6.0.0",
+		"cardinal-components-entity": ">=6.0.0"
+	},
+	"custom": {
+		"cardinal-components": [
+			"mokuslib:mokus_cooldown"
+		]
+	}
+}

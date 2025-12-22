@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mokuslib:item/mokus_sword_alt_ver_inventory"
+  }
+}

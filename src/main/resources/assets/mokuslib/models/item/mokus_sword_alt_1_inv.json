@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mokuslib:item/mokus_sword_angel_ver_inv"
+  }
+}
