@@ -10,8 +10,10 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.mokus.mokuslib.cooldown.MokusLibCooldownItem;
+import net.mokus.mokuslib.itemskin.CustomItemModel;
 
-public class CooldownTestItem extends SwordItem implements MokusLibCooldownItem {
+public class CooldownTestItem extends SwordItem implements MokusLibCooldownItem, CustomItemModel {
 
     public CooldownTestItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);
@@ -20,6 +22,11 @@ public class CooldownTestItem extends SwordItem implements MokusLibCooldownItem 
     @Override
     public int getMaxCooldown(ItemStack item) {
         return 240;
+    }
+
+    @Override
+    public boolean hasInventoryModel() {
+        return false;
     }
 
     @Override
@@ -32,15 +39,12 @@ public class CooldownTestItem extends SwordItem implements MokusLibCooldownItem 
         return UseAction.SPEAR;
     }
 
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-
         if (!checkCooldown(user, this)) {
             return TypedActionResult.fail(itemStack);
         }
-
         user.setCurrentHand(hand);
         return TypedActionResult.consume(itemStack);
     }
@@ -64,13 +68,8 @@ public class CooldownTestItem extends SwordItem implements MokusLibCooldownItem 
         h *= n / m;
         k *= n / m;
         l *= n / m;
-
-
         playerEntity.addVelocity(h, k, l);
         playerEntity.useRiptide(40,0.0f,stack);
-
         applyCooldown(playerEntity,stack);
     }
-
-
 }

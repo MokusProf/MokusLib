@@ -6,16 +6,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.ClickType;
 import net.minecraft.util.Formatting;
-import net.minecraft.world.World;
 import net.mokus.mokuslib.components.MokusLibItemComponents;
 import net.mokus.mokuslib.itemskin.CustomItemModel;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -24,7 +21,6 @@ public class SkinTestItem extends SwordItem implements CustomItemModel {
     public SkinTestItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);
     }
-
 
     @Override
     public int getVariantCount() {
@@ -58,7 +54,6 @@ public class SkinTestItem extends SwordItem implements CustomItemModel {
                 variantName = "ERROR";
                 yield 0x702963;
             }
-
             default -> {
                 variantName = "Vendetta";
                 yield 0x800020;

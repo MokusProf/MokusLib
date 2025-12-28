@@ -8,7 +8,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
-import net.mokus.mokuslib.item.MokusLibCooldownItem;
+import net.mokus.mokuslib.cooldown.MokusLibCooldownItem;
 import net.mokus.mokuslib.components.ModComponents;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;

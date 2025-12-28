@@ -41,11 +41,14 @@ public abstract class ItemRendererMixin {
                 || mode == ModelTransformationMode.FIXED
                 || mode == ModelTransformationMode.GROUND) {
 
+
+
             modelId = api.getInventoryModel(variant);
+            if (!api.hasInventoryModel()) modelId = api.getHandModel(variant);
         } else {
             modelId = api.getHandModel(variant);
-            if (modelId == null) return bakedModel;
         }
+        if (modelId == null) return bakedModel;
 
         return ((ItemRendererAccessor) this)
                 .mokuslib$getModels()

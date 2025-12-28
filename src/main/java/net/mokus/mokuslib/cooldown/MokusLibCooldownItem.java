@@ -1,4 +1,4 @@
-package net.mokus.mokuslib.item;
+package net.mokus.mokuslib.cooldown;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

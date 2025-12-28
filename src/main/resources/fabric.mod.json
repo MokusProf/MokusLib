@@ -3,13 +3,13 @@
 	"id": "mokuslib",
 	"version": "${version}",
 	"name": "MokusLib",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A library mod for Mokus's mods",
 	"authors": [
 		"_Mokus"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"wiki": "https://github.com/MokusProf/MokusLib/wiki",
+		"sources": "https://github.com/MokusProf/MokusLib"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/mokuslib/icon.png",

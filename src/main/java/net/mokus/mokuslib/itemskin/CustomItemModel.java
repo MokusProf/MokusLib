@@ -10,6 +10,13 @@ public interface CustomItemModel {
         return 0;
     }
 
+    default boolean onlyOneInventoryModel(){
+        return false;
+    }
+    default boolean hasInventoryModel(){
+        return true;
+    }
+
     default String getModelNamespace() {
         return this instanceof Item item
                 ? Registries.ITEM.getId(item).getNamespace()
@@ -23,7 +30,8 @@ public interface CustomItemModel {
     }
 
     default Identifier getInventoryModel(int variant) {
-        if (variant == 0) return Identifier.of(getModelNamespace(), getItemPath() + "_inv");
+        if (!hasInventoryModel()) return null;
+        if ((variant == 0) || onlyOneInventoryModel()) return Identifier.of(getModelNamespace(), getItemPath() + "_inv");
         return Identifier.of(getModelNamespace(), getItemPath() + "_alt_" + variant + "_inv");
     }
 
