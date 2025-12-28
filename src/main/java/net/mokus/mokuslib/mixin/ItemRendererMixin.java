@@ -1,7 +1,6 @@
 package net.mokus.mokuslib.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.json.ModelTransformationMode;
