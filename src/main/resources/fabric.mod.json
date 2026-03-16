@@ -39,7 +39,8 @@
 	},
 	"custom": {
 		"cardinal-components": [
-			"mokuslib:mokus_cooldown"
+			"mokuslib:mokus_cooldown",
+			"mokuslib:last_damage_dealt"
 		]
 	}
 }

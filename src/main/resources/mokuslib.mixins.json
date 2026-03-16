@@ -3,6 +3,7 @@
   "package": "net.mokus.mokuslib.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ActualDamageMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -11,9 +12,9 @@
     "requireAnnotations": true
   },
   "client": [
-    "DrawContextMixin",
-    "ItemRendererAccessor",
-    "ItemRendererMixin",
-    "ModelLoaderMixin"
+    "client.DrawContextMixin",
+    "client.ItemRendererAccessor",
+    "client.ItemRendererMixin",
+    "client.ModelLoaderMixin"
   ]
 }

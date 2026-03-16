@@ -1,4 +1,4 @@
-package net.mokus.mokuslib.mixin;
+package net.mokus.mokuslib.mixin.client;
 
 import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;

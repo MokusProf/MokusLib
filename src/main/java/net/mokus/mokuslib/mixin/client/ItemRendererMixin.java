@@ -1,4 +1,4 @@
-package net.mokus.mokuslib.mixin;
+package net.mokus.mokuslib.mixin.client;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.client.render.item.ItemRenderer;
@@ -39,9 +39,6 @@ public abstract class ItemRendererMixin {
         if (mode == ModelTransformationMode.GUI
                 || mode == ModelTransformationMode.FIXED
                 || mode == ModelTransformationMode.GROUND) {
-
-
-
             modelId = api.getInventoryModel(variant);
             if (!api.hasInventoryModel()) modelId = api.getHandModel(variant);
         } else {
