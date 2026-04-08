@@ -16,7 +16,6 @@ public final class MokusLibClientAPI {
 
     public static void registerItemModels(Identifier... modelIds) {
         for (Identifier id : modelIds) {
-            System.out.println(id);
             EXTRA_ITEM_MODELS.add(ModelIdentifier.ofInventoryVariant(id));
         }
     }
